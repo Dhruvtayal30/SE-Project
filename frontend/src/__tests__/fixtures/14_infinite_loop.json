@@ -1,0 +1,246 @@
+{
+ "ok": true,
+ "api_version": "1.0",
+ "function": {
+  "name": "spin",
+  "signature": "void spin(void)",
+  "start_line": 1,
+  "end_line": 4
+ },
+ "functions": [
+  {
+   "name": "spin",
+   "start_line": 1,
+   "end_line": 4,
+   "complexity": 2,
+   "error": null,
+   "selected": true,
+   "default": true
+  }
+ ],
+ "graph": {
+  "entry": "n0",
+  "exit": "n2",
+  "nodes": [
+   {
+    "id": "n0",
+    "index": 0,
+    "kind": "entry",
+    "construct": "entry",
+    "role": "Entry",
+    "explanation": "Synthetic start node. Control enters the function here.",
+    "label": "ENTRY",
+    "statements": [
+     {
+      "text": "ENTRY",
+      "line": 1,
+      "column": 1,
+      "end_line": 1,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": true,
+    "can_reach_exit": false,
+    "distance": 0,
+    "parent_edge": null,
+    "loop_header": false,
+    "in_degree": 0,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n1",
+    "index": 1,
+    "kind": "block",
+    "construct": "loop_head",
+    "role": "Loop head (constant-true loop)",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "for (;;)",
+    "statements": [
+     {
+      "text": "for (;;)",
+      "line": 2,
+      "column": 5,
+      "end_line": 2,
+      "end_column": 13
+     }
+    ],
+    "lines": [
+     2
+    ],
+    "reachable": true,
+    "can_reach_exit": false,
+    "distance": 1,
+    "parent_edge": "e1",
+    "loop_header": true,
+    "in_degree": 2,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n2",
+    "index": 2,
+    "kind": "exit",
+    "construct": "exit",
+    "role": "Exit",
+    "explanation": "Single logical exit. Every return, noreturn call and fall-off-the-end connects here.",
+    "label": "EXIT",
+    "statements": [
+     {
+      "text": "EXIT",
+      "line": 4,
+      "column": 1,
+      "end_line": 4,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": false,
+    "can_reach_exit": true,
+    "distance": null,
+    "parent_edge": null,
+    "loop_header": false,
+    "in_degree": 0,
+    "out_degree": 0,
+    "returns": false
+   }
+  ],
+  "edges": [
+   {
+    "id": "e1",
+    "index": 1,
+    "source": "n0",
+    "target": "n1",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e2",
+    "index": 2,
+    "source": "n1",
+    "target": "n1",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": true,
+    "reachable": true
+   }
+  ]
+ },
+ "statistics": {
+  "nodes_total": 3,
+  "edges_total": 2,
+  "nodes_reachable": 2,
+  "nodes_unreachable": 1,
+  "decision_nodes": 0,
+  "switch_nodes": 0,
+  "basic_blocks": 1,
+  "loops": 1,
+  "function_lines": 4
+ },
+ "complexity": {
+  "value": 2,
+  "convention": "McCabe M = E - N + 2P on the Entry-reachable subgraph",
+  "formula": "M = E \u2212 N + 2P",
+  "substituted": "M = 2 \u2212 2 + 2\u00d71 = 2",
+  "nodes": 2,
+  "edges": 2,
+  "components": 1,
+  "decision_nodes": 0,
+  "branch_contribution": 0,
+  "branch_formula": "M = 1 + \u03a3 max(0, outdeg(v) \u2212 1)",
+  "branch_substituted": "M = 1 + 0 = 1",
+  "branch_value": 1,
+  "formulas_agree": false,
+  "structural": {
+   "value": 1,
+   "decisions": 0,
+   "breakdown": {
+    "if": 0,
+    "loop": 0,
+    "case": 0,
+    "logical": 0,
+    "ternary": 0
+   },
+   "agrees": true,
+   "scope": "whole graph, including unreachable code"
+  },
+  "full_graph": {
+   "nodes": 3,
+   "edges": 2,
+   "components": 2,
+   "value": 3
+  },
+  "interpretation": {
+   "band": "low",
+   "label": "Simple function, low risk",
+   "text": "Easy to understand and test; around this many tests cover every independent path."
+  },
+  "applicability": [
+   {
+    "code": "EXIT_UNREACHABLE",
+    "message": "EXIT is not reachable from ENTRY (non-terminating function). The graph has no sink, so E-N+2P (2) exceeds the branch formula (1) by one; the reading 'number of independent ENTRY-to-EXIT paths' does not apply and no basis paths are produced."
+   },
+   {
+    "code": "UNREACHABLE_EXCLUDED",
+    "message": "1 unreachable node(s) are excluded from M (full graph: N=3, E=2, P=2)."
+   }
+  ]
+ },
+ "reachability": {
+  "exit_reachable": false,
+  "unreachable_nodes": [
+   "n2"
+  ],
+  "trapped_nodes": [
+   "n0",
+   "n1"
+  ],
+  "back_edges": [
+   "e2"
+  ],
+  "irreducible": false,
+  "reachable_percent": 66.67
+ },
+ "paths": {
+  "convention": "linear independence of edge-usage vectors over the rationals (exact)",
+  "expected": 2,
+  "rank": 0,
+  "paths": [],
+  "status": "unavailable",
+  "reason": "EXIT is not reachable from ENTRY, so no terminating ENTRY-to-EXIT path exists."
+ },
+ "warnings": [
+  {
+   "code": "EXIT_UNREACHABLE",
+   "severity": "warning",
+   "message": "EXIT is unreachable: the function never returns (infinite loop or noreturn path).",
+   "line": null,
+   "column": null
+  },
+  {
+   "code": "CONSTANT_LOOP",
+   "severity": "info",
+   "message": "Loop condition is the literal constant true: no False edge is created, so code after the loop is reachable only through break/return/goto.",
+   "line": 2,
+   "column": 5,
+   "node": "n1"
+  }
+ ],
+ "source_map": {
+  "line_to_nodes": {
+   "2": [
+    "n1"
+   ]
+  }
+ },
+ "assumptions": [
+  "Static analysis only: the program is parsed, never compiled or executed.",
+  "Function calls are single statements (no inter-procedural analysis); macros are not expanded.",
+  "Paths are structural: branch conditions are not solved, so a listed path may be infeasible."
+ ]
+}

@@ -1,0 +1,303 @@
+{
+ "ok": true,
+ "api_version": "1.0",
+ "function": {
+  "name": "early",
+  "signature": "int early(void)",
+  "start_line": 1,
+  "end_line": 5
+ },
+ "functions": [
+  {
+   "name": "early",
+   "start_line": 1,
+   "end_line": 5,
+   "complexity": 1,
+   "error": null,
+   "selected": true,
+   "default": true
+  }
+ ],
+ "graph": {
+  "entry": "n0",
+  "exit": "n3",
+  "nodes": [
+   {
+    "id": "n0",
+    "index": 0,
+    "kind": "entry",
+    "construct": "entry",
+    "role": "Entry",
+    "explanation": "Synthetic start node. Control enters the function here.",
+    "label": "ENTRY",
+    "statements": [
+     {
+      "text": "ENTRY",
+      "line": 1,
+      "column": 1,
+      "end_line": 1,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 0,
+    "parent_edge": null,
+    "loop_header": false,
+    "in_degree": 0,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n1",
+    "index": 1,
+    "kind": "block",
+    "construct": "return",
+    "role": "Return block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "return 1;",
+    "statements": [
+     {
+      "text": "return 1;",
+      "line": 2,
+      "column": 5,
+      "end_line": 2,
+      "end_column": 14
+     }
+    ],
+    "lines": [
+     2
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 1,
+    "parent_edge": "e1",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": true
+   },
+   {
+    "id": "n2",
+    "index": 2,
+    "kind": "block",
+    "construct": "block",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "int x = 2; \u23ce x++;",
+    "statements": [
+     {
+      "text": "int x = 2;",
+      "line": 3,
+      "column": 5,
+      "end_line": 3,
+      "end_column": 15
+     },
+     {
+      "text": "x++;",
+      "line": 4,
+      "column": 5,
+      "end_line": 4,
+      "end_column": 9
+     }
+    ],
+    "lines": [
+     3,
+     4
+    ],
+    "reachable": false,
+    "can_reach_exit": true,
+    "distance": null,
+    "parent_edge": null,
+    "loop_header": false,
+    "in_degree": 0,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n3",
+    "index": 3,
+    "kind": "exit",
+    "construct": "exit",
+    "role": "Exit",
+    "explanation": "Single logical exit. Every return, noreturn call and fall-off-the-end connects here.",
+    "label": "EXIT",
+    "statements": [
+     {
+      "text": "EXIT",
+      "line": 5,
+      "column": 1,
+      "end_line": 5,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 2,
+    "parent_edge": "e2",
+    "loop_header": false,
+    "in_degree": 2,
+    "out_degree": 0,
+    "returns": false
+   }
+  ],
+  "edges": [
+   {
+    "id": "e1",
+    "index": 1,
+    "source": "n0",
+    "target": "n1",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e2",
+    "index": 2,
+    "source": "n1",
+    "target": "n3",
+    "kind": "return",
+    "label": "return",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e3",
+    "index": 3,
+    "source": "n2",
+    "target": "n3",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": false
+   }
+  ]
+ },
+ "statistics": {
+  "nodes_total": 4,
+  "edges_total": 3,
+  "nodes_reachable": 3,
+  "nodes_unreachable": 1,
+  "decision_nodes": 0,
+  "switch_nodes": 0,
+  "basic_blocks": 2,
+  "loops": 0,
+  "function_lines": 5
+ },
+ "complexity": {
+  "value": 1,
+  "convention": "McCabe M = E - N + 2P on the Entry-reachable subgraph",
+  "formula": "M = E \u2212 N + 2P",
+  "substituted": "M = 2 \u2212 3 + 2\u00d71 = 1",
+  "nodes": 3,
+  "edges": 2,
+  "components": 1,
+  "decision_nodes": 0,
+  "branch_contribution": 0,
+  "branch_formula": "M = 1 + \u03a3 max(0, outdeg(v) \u2212 1)",
+  "branch_substituted": "M = 1 + 0 = 1",
+  "branch_value": 1,
+  "formulas_agree": true,
+  "structural": {
+   "value": 1,
+   "decisions": 0,
+   "breakdown": {
+    "if": 0,
+    "loop": 0,
+    "case": 0,
+    "logical": 0,
+    "ternary": 0
+   },
+   "agrees": true,
+   "scope": "whole graph, including unreachable code"
+  },
+  "full_graph": {
+   "nodes": 4,
+   "edges": 3,
+   "components": 1,
+   "value": 1
+  },
+  "interpretation": {
+   "band": "low",
+   "label": "Simple function, low risk",
+   "text": "Easy to understand and test; around this many tests cover every independent path."
+  },
+  "applicability": [
+   {
+    "code": "UNREACHABLE_EXCLUDED",
+    "message": "1 unreachable node(s) are excluded from M (full graph: N=4, E=3, P=1)."
+   }
+  ]
+ },
+ "reachability": {
+  "exit_reachable": true,
+  "unreachable_nodes": [
+   "n2"
+  ],
+  "trapped_nodes": [],
+  "back_edges": [],
+  "irreducible": false,
+  "reachable_percent": 75.0
+ },
+ "paths": {
+  "convention": "linear independence of edge-usage vectors over the rationals (exact)",
+  "expected": 1,
+  "rank": 1,
+  "paths": [
+   {
+    "index": 1,
+    "nodes": [
+     "n0",
+     "n1",
+     "n3"
+    ],
+    "edges": [
+     "e1",
+     "e2"
+    ],
+    "decisions": [],
+    "new_edges": [
+     "e1",
+     "e2"
+    ],
+    "repeats_nodes": false,
+    "length": 2
+   }
+  ],
+  "status": "complete"
+ },
+ "warnings": [
+  {
+   "code": "UNREACHABLE_CODE",
+   "severity": "warning",
+   "message": "Unreachable code: int x = 2;",
+   "line": 3,
+   "column": 5,
+   "node": "n2"
+  }
+ ],
+ "source_map": {
+  "line_to_nodes": {
+   "2": [
+    "n1"
+   ],
+   "3": [
+    "n2"
+   ],
+   "4": [
+    "n2"
+   ]
+  }
+ },
+ "assumptions": [
+  "Static analysis only: the program is parsed, never compiled or executed.",
+  "Function calls are single statements (no inter-procedural analysis); macros are not expanded.",
+  "Paths are structural: branch conditions are not solved, so a listed path may be infeasible."
+ ]
+}

@@ -1,0 +1,1273 @@
+{
+ "ok": true,
+ "api_version": "1.0",
+ "function": {
+  "name": "main",
+  "signature": "int main(void)",
+  "start_line": 3,
+  "end_line": 28
+ },
+ "functions": [
+  {
+   "name": "main",
+   "start_line": 3,
+   "end_line": 28,
+   "complexity": 8,
+   "error": null,
+   "selected": true,
+   "default": true
+  }
+ ],
+ "graph": {
+  "entry": "n0",
+  "exit": "n16",
+  "nodes": [
+   {
+    "id": "n0",
+    "index": 0,
+    "kind": "entry",
+    "construct": "entry",
+    "role": "Entry",
+    "explanation": "Synthetic start node. Control enters the function here.",
+    "label": "ENTRY",
+    "statements": [
+     {
+      "text": "ENTRY",
+      "line": 3,
+      "column": 1,
+      "end_line": 3,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 0,
+    "parent_edge": null,
+    "loop_header": false,
+    "in_degree": 0,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n1",
+    "index": 1,
+    "kind": "block",
+    "construct": "block",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "int expression, a, b, i; \u23ce scanf(\"%d %d %d\", &expression, &a, &b);",
+    "statements": [
+     {
+      "text": "int expression, a, b, i;",
+      "line": 4,
+      "column": 5,
+      "end_line": 4,
+      "end_column": 29
+     },
+     {
+      "text": "scanf(\"%d %d %d\", &expression, &a, &b);",
+      "line": 5,
+      "column": 5,
+      "end_line": 5,
+      "end_column": 44
+     }
+    ],
+    "lines": [
+     4,
+     5
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 1,
+    "parent_edge": "e1",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n2",
+    "index": 2,
+    "kind": "switch",
+    "construct": "switch",
+    "role": "Switch dispatch",
+    "explanation": "Multi-way branch with 3 outgoing edges (one per case label plus default). It adds 2 to the cyclomatic complexity.",
+    "label": "switch (expression)",
+    "statements": [
+     {
+      "text": "switch (expression)",
+      "line": 7,
+      "column": 5,
+      "end_line": 7,
+      "end_column": 24
+     }
+    ],
+    "lines": [
+     7
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 2,
+    "parent_edge": "e2",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 3,
+    "returns": false
+   },
+   {
+    "id": "n3",
+    "index": 3,
+    "kind": "block",
+    "construct": "for_init",
+    "role": "For-loop initialisation",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "i = 0;",
+    "statements": [
+     {
+      "text": "i = 0;",
+      "line": 9,
+      "column": 18,
+      "end_line": 9,
+      "end_column": 23
+     }
+    ],
+    "lines": [
+     9
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 3,
+    "parent_edge": "e3",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n4",
+    "index": 4,
+    "kind": "decision",
+    "construct": "for",
+    "role": "Decision (for-loop condition)",
+    "explanation": "Evaluates one predicate of the for-loop condition. It has True and False edges, so it adds 1 to the cyclomatic complexity.",
+    "label": "i < 5",
+    "statements": [
+     {
+      "text": "i < 5",
+      "line": 9,
+      "column": 25,
+      "end_line": 9,
+      "end_column": 30
+     }
+    ],
+    "lines": [
+     9
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 4,
+    "parent_edge": "e6",
+    "loop_header": true,
+    "in_degree": 2,
+    "out_degree": 2,
+    "returns": false
+   },
+   {
+    "id": "n5",
+    "index": 5,
+    "kind": "decision",
+    "construct": "for",
+    "role": "Decision (for-loop condition)",
+    "explanation": "Evaluates one predicate of the for-loop condition. It has True and False edges, so it adds 1 to the cyclomatic complexity.",
+    "label": "i < 3",
+    "statements": [
+     {
+      "text": "i < 3",
+      "line": 9,
+      "column": 34,
+      "end_line": 9,
+      "end_column": 39
+     }
+    ],
+    "lines": [
+     9
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 5,
+    "parent_edge": "e7",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 2,
+    "returns": false
+   },
+   {
+    "id": "n6",
+    "index": 6,
+    "kind": "block",
+    "construct": "for_update",
+    "role": "For-loop update",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "i++",
+    "statements": [
+     {
+      "text": "i++",
+      "line": 9,
+      "column": 41,
+      "end_line": 9,
+      "end_column": 44
+     }
+    ],
+    "lines": [
+     9
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 8,
+    "parent_edge": "e14",
+    "loop_header": false,
+    "in_degree": 2,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n7",
+    "index": 7,
+    "kind": "decision",
+    "construct": "if",
+    "role": "Decision (if condition)",
+    "explanation": "Evaluates one predicate of the if condition. It has True and False edges, so it adds 1 to the cyclomatic complexity.",
+    "label": "i % 2 == 0",
+    "statements": [
+     {
+      "text": "i % 2 == 0",
+      "line": 10,
+      "column": 21,
+      "end_line": 10,
+      "end_column": 31
+     }
+    ],
+    "lines": [
+     10
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 6,
+    "parent_edge": "e9",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 2,
+    "returns": false
+   },
+   {
+    "id": "n8",
+    "index": 8,
+    "kind": "block",
+    "construct": "statement",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "printf(\"True block\\n\");",
+    "statements": [
+     {
+      "text": "printf(\"True block\\n\");",
+      "line": 11,
+      "column": 21,
+      "end_line": 11,
+      "end_column": 44
+     }
+    ],
+    "lines": [
+     11
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 7,
+    "parent_edge": "e12",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n9",
+    "index": 9,
+    "kind": "block",
+    "construct": "statement",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "printf(\"False block\\n\");",
+    "statements": [
+     {
+      "text": "printf(\"False block\\n\");",
+      "line": 13,
+      "column": 21,
+      "end_line": 13,
+      "end_column": 45
+     }
+    ],
+    "lines": [
+     13
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 7,
+    "parent_edge": "e13",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n10",
+    "index": 10,
+    "kind": "decision",
+    "construct": "if",
+    "role": "Decision (if condition)",
+    "explanation": "Evaluates one predicate of the if condition. It has True and False edges, so it adds 1 to the cyclomatic complexity.",
+    "label": "a > 0",
+    "statements": [
+     {
+      "text": "a > 0",
+      "line": 18,
+      "column": 17,
+      "end_line": 18,
+      "end_column": 22
+     }
+    ],
+    "lines": [
+     18
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 3,
+    "parent_edge": "e4",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 2,
+    "returns": false
+   },
+   {
+    "id": "n11",
+    "index": 11,
+    "kind": "decision",
+    "construct": "if",
+    "role": "Decision (if condition)",
+    "explanation": "Evaluates one predicate of the if condition. It has True and False edges, so it adds 1 to the cyclomatic complexity.",
+    "label": "b > 0",
+    "statements": [
+     {
+      "text": "b > 0",
+      "line": 18,
+      "column": 26,
+      "end_line": 18,
+      "end_column": 31
+     }
+    ],
+    "lines": [
+     18
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 4,
+    "parent_edge": "e16",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 2,
+    "returns": false
+   },
+   {
+    "id": "n12",
+    "index": 12,
+    "kind": "block",
+    "construct": "statement",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "printf(\"True block\\n\");",
+    "statements": [
+     {
+      "text": "printf(\"True block\\n\");",
+      "line": 19,
+      "column": 17,
+      "end_line": 19,
+      "end_column": 40
+     }
+    ],
+    "lines": [
+     19
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 4,
+    "parent_edge": "e17",
+    "loop_header": false,
+    "in_degree": 2,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n13",
+    "index": 13,
+    "kind": "block",
+    "construct": "statement",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "printf(\"False block\\n\");",
+    "statements": [
+     {
+      "text": "printf(\"False block\\n\");",
+      "line": 21,
+      "column": 17,
+      "end_line": 21,
+      "end_column": 41
+     }
+    ],
+    "lines": [
+     21
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 5,
+    "parent_edge": "e19",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n14",
+    "index": 14,
+    "kind": "block",
+    "construct": "statement",
+    "role": "Sequential block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "printf(\"Block 1\\n\");",
+    "statements": [
+     {
+      "text": "printf(\"Block 1\\n\");",
+      "line": 25,
+      "column": 13,
+      "end_line": 25,
+      "end_column": 33
+     }
+    ],
+    "lines": [
+     25
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 3,
+    "parent_edge": "e5",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 1,
+    "returns": false
+   },
+   {
+    "id": "n15",
+    "index": 15,
+    "kind": "block",
+    "construct": "return",
+    "role": "Return block",
+    "explanation": "Straight-line code: entered only at the top, left only at the bottom. It adds 0 to the cyclomatic complexity.",
+    "label": "return 0;",
+    "statements": [
+     {
+      "text": "return 0;",
+      "line": 27,
+      "column": 5,
+      "end_line": 27,
+      "end_column": 14
+     }
+    ],
+    "lines": [
+     27
+    ],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 4,
+    "parent_edge": "e22",
+    "loop_header": false,
+    "in_degree": 5,
+    "out_degree": 1,
+    "returns": true
+   },
+   {
+    "id": "n16",
+    "index": 16,
+    "kind": "exit",
+    "construct": "exit",
+    "role": "Exit",
+    "explanation": "Single logical exit. Every return, noreturn call and fall-off-the-end connects here.",
+    "label": "EXIT",
+    "statements": [
+     {
+      "text": "EXIT",
+      "line": 28,
+      "column": 1,
+      "end_line": 28,
+      "end_column": 1
+     }
+    ],
+    "lines": [],
+    "reachable": true,
+    "can_reach_exit": true,
+    "distance": 5,
+    "parent_edge": "e23",
+    "loop_header": false,
+    "in_degree": 1,
+    "out_degree": 0,
+    "returns": false
+   }
+  ],
+  "edges": [
+   {
+    "id": "e1",
+    "index": 1,
+    "source": "n0",
+    "target": "n1",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e2",
+    "index": 2,
+    "source": "n1",
+    "target": "n2",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e3",
+    "index": 3,
+    "source": "n2",
+    "target": "n3",
+    "kind": "case",
+    "label": "case 1",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e4",
+    "index": 4,
+    "source": "n2",
+    "target": "n10",
+    "kind": "case",
+    "label": "case 2",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e5",
+    "index": 5,
+    "source": "n2",
+    "target": "n14",
+    "kind": "default",
+    "label": "default",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e6",
+    "index": 6,
+    "source": "n3",
+    "target": "n4",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e7",
+    "index": 7,
+    "source": "n4",
+    "target": "n5",
+    "kind": "true",
+    "label": "True",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e8",
+    "index": 8,
+    "source": "n4",
+    "target": "n15",
+    "kind": "false",
+    "label": "False \u00b7 break",
+    "via": "break",
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e9",
+    "index": 9,
+    "source": "n5",
+    "target": "n7",
+    "kind": "true",
+    "label": "True",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e10",
+    "index": 10,
+    "source": "n5",
+    "target": "n15",
+    "kind": "false",
+    "label": "False \u00b7 break",
+    "via": "break",
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e11",
+    "index": 11,
+    "source": "n6",
+    "target": "n4",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": true,
+    "reachable": true
+   },
+   {
+    "id": "e12",
+    "index": 12,
+    "source": "n7",
+    "target": "n8",
+    "kind": "true",
+    "label": "True",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e13",
+    "index": 13,
+    "source": "n7",
+    "target": "n9",
+    "kind": "false",
+    "label": "False",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e14",
+    "index": 14,
+    "source": "n8",
+    "target": "n6",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e15",
+    "index": 15,
+    "source": "n9",
+    "target": "n6",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e16",
+    "index": 16,
+    "source": "n10",
+    "target": "n11",
+    "kind": "false",
+    "label": "False",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e17",
+    "index": 17,
+    "source": "n10",
+    "target": "n12",
+    "kind": "true",
+    "label": "True",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e18",
+    "index": 18,
+    "source": "n11",
+    "target": "n12",
+    "kind": "true",
+    "label": "True",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e19",
+    "index": 19,
+    "source": "n11",
+    "target": "n13",
+    "kind": "false",
+    "label": "False",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e20",
+    "index": 20,
+    "source": "n12",
+    "target": "n15",
+    "kind": "break",
+    "label": "break",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e21",
+    "index": 21,
+    "source": "n13",
+    "target": "n15",
+    "kind": "break",
+    "label": "break",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e22",
+    "index": 22,
+    "source": "n14",
+    "target": "n15",
+    "kind": "next",
+    "label": "",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   },
+   {
+    "id": "e23",
+    "index": 23,
+    "source": "n15",
+    "target": "n16",
+    "kind": "return",
+    "label": "return",
+    "via": null,
+    "back_edge": false,
+    "reachable": true
+   }
+  ]
+ },
+ "statistics": {
+  "nodes_total": 17,
+  "edges_total": 23,
+  "nodes_reachable": 17,
+  "nodes_unreachable": 0,
+  "decision_nodes": 6,
+  "switch_nodes": 1,
+  "basic_blocks": 9,
+  "loops": 1,
+  "function_lines": 26
+ },
+ "complexity": {
+  "value": 8,
+  "convention": "McCabe M = E - N + 2P on the Entry-reachable subgraph",
+  "formula": "M = E \u2212 N + 2P",
+  "substituted": "M = 23 \u2212 17 + 2\u00d71 = 8",
+  "nodes": 17,
+  "edges": 23,
+  "components": 1,
+  "decision_nodes": 6,
+  "branch_contribution": 7,
+  "branch_formula": "M = 1 + \u03a3 max(0, outdeg(v) \u2212 1)",
+  "branch_substituted": "M = 1 + 7 = 8",
+  "branch_value": 8,
+  "formulas_agree": true,
+  "structural": {
+   "value": 8,
+   "decisions": 7,
+   "breakdown": {
+    "if": 2,
+    "loop": 1,
+    "case": 2,
+    "logical": 2,
+    "ternary": 0
+   },
+   "agrees": true,
+   "scope": "whole graph, including unreachable code"
+  },
+  "full_graph": {
+   "nodes": 17,
+   "edges": 23,
+   "components": 1,
+   "value": 8
+  },
+  "interpretation": {
+   "band": "low",
+   "label": "Simple function, low risk",
+   "text": "Easy to understand and test; around this many tests cover every independent path."
+  },
+  "applicability": []
+ },
+ "reachability": {
+  "exit_reachable": true,
+  "unreachable_nodes": [],
+  "trapped_nodes": [],
+  "back_edges": [
+   "e11"
+  ],
+  "irreducible": false,
+  "reachable_percent": 100.0
+ },
+ "paths": {
+  "convention": "linear independence of edge-usage vectors over the rationals (exact)",
+  "expected": 8,
+  "rank": 8,
+  "paths": [
+   {
+    "index": 1,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n14",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e5",
+     "e22",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e5",
+      "label": "default"
+     }
+    ],
+    "new_edges": [
+     "e1",
+     "e2",
+     "e5",
+     "e22",
+     "e23"
+    ],
+    "repeats_nodes": false,
+    "length": 5
+   },
+   {
+    "index": 2,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n3",
+     "n4",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e3",
+     "e6",
+     "e8",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e3",
+      "label": "case 1"
+     },
+     {
+      "node": "n4",
+      "edge": "e8",
+      "label": "False \u00b7 break"
+     }
+    ],
+    "new_edges": [
+     "e3",
+     "e6",
+     "e8"
+    ],
+    "repeats_nodes": false,
+    "length": 6
+   },
+   {
+    "index": 3,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n10",
+     "n12",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e4",
+     "e17",
+     "e20",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e4",
+      "label": "case 2"
+     },
+     {
+      "node": "n10",
+      "edge": "e17",
+      "label": "True"
+     }
+    ],
+    "new_edges": [
+     "e4",
+     "e17",
+     "e20"
+    ],
+    "repeats_nodes": false,
+    "length": 6
+   },
+   {
+    "index": 4,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n3",
+     "n4",
+     "n5",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e3",
+     "e6",
+     "e7",
+     "e10",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e3",
+      "label": "case 1"
+     },
+     {
+      "node": "n4",
+      "edge": "e7",
+      "label": "True"
+     },
+     {
+      "node": "n5",
+      "edge": "e10",
+      "label": "False \u00b7 break"
+     }
+    ],
+    "new_edges": [
+     "e7",
+     "e10"
+    ],
+    "repeats_nodes": false,
+    "length": 7
+   },
+   {
+    "index": 5,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n3",
+     "n4",
+     "n5",
+     "n7",
+     "n8",
+     "n6",
+     "n4",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e3",
+     "e6",
+     "e7",
+     "e9",
+     "e12",
+     "e14",
+     "e11",
+     "e8",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e3",
+      "label": "case 1"
+     },
+     {
+      "node": "n4",
+      "edge": "e7",
+      "label": "True"
+     },
+     {
+      "node": "n5",
+      "edge": "e9",
+      "label": "True"
+     },
+     {
+      "node": "n7",
+      "edge": "e12",
+      "label": "True"
+     },
+     {
+      "node": "n4",
+      "edge": "e8",
+      "label": "False \u00b7 break"
+     }
+    ],
+    "new_edges": [
+     "e9",
+     "e12",
+     "e14",
+     "e11"
+    ],
+    "repeats_nodes": true,
+    "length": 11
+   },
+   {
+    "index": 6,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n3",
+     "n4",
+     "n5",
+     "n7",
+     "n9",
+     "n6",
+     "n4",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e3",
+     "e6",
+     "e7",
+     "e9",
+     "e13",
+     "e15",
+     "e11",
+     "e8",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e3",
+      "label": "case 1"
+     },
+     {
+      "node": "n4",
+      "edge": "e7",
+      "label": "True"
+     },
+     {
+      "node": "n5",
+      "edge": "e9",
+      "label": "True"
+     },
+     {
+      "node": "n7",
+      "edge": "e13",
+      "label": "False"
+     },
+     {
+      "node": "n4",
+      "edge": "e8",
+      "label": "False \u00b7 break"
+     }
+    ],
+    "new_edges": [
+     "e13",
+     "e15"
+    ],
+    "repeats_nodes": true,
+    "length": 11
+   },
+   {
+    "index": 7,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n10",
+     "n11",
+     "n12",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e4",
+     "e16",
+     "e18",
+     "e20",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e4",
+      "label": "case 2"
+     },
+     {
+      "node": "n10",
+      "edge": "e16",
+      "label": "False"
+     },
+     {
+      "node": "n11",
+      "edge": "e18",
+      "label": "True"
+     }
+    ],
+    "new_edges": [
+     "e16",
+     "e18"
+    ],
+    "repeats_nodes": false,
+    "length": 7
+   },
+   {
+    "index": 8,
+    "nodes": [
+     "n0",
+     "n1",
+     "n2",
+     "n10",
+     "n11",
+     "n13",
+     "n15",
+     "n16"
+    ],
+    "edges": [
+     "e1",
+     "e2",
+     "e4",
+     "e16",
+     "e19",
+     "e21",
+     "e23"
+    ],
+    "decisions": [
+     {
+      "node": "n2",
+      "edge": "e4",
+      "label": "case 2"
+     },
+     {
+      "node": "n10",
+      "edge": "e16",
+      "label": "False"
+     },
+     {
+      "node": "n11",
+      "edge": "e19",
+      "label": "False"
+     }
+    ],
+    "new_edges": [
+     "e19",
+     "e21"
+    ],
+    "repeats_nodes": false,
+    "length": 7
+   }
+  ],
+  "status": "complete"
+ },
+ "warnings": [],
+ "source_map": {
+  "line_to_nodes": {
+   "4": [
+    "n1"
+   ],
+   "5": [
+    "n1"
+   ],
+   "7": [
+    "n2"
+   ],
+   "9": [
+    "n3",
+    "n4",
+    "n5",
+    "n6"
+   ],
+   "10": [
+    "n7"
+   ],
+   "11": [
+    "n8"
+   ],
+   "13": [
+    "n9"
+   ],
+   "18": [
+    "n10",
+    "n11"
+   ],
+   "19": [
+    "n12"
+   ],
+   "21": [
+    "n13"
+   ],
+   "25": [
+    "n14"
+   ],
+   "27": [
+    "n15"
+   ]
+  }
+ },
+ "assumptions": [
+  "Static analysis only: the program is parsed, never compiled or executed.",
+  "Function calls are single statements (no inter-procedural analysis); macros are not expanded.",
+  "Paths are structural: branch conditions are not solved, so a listed path may be infeasible."
+ ]
+}

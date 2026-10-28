@@ -1,0 +1,4 @@
+void spin(void) {
+    for (;;) {
+    }
+}

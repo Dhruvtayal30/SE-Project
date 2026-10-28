@@ -1,0 +1,277 @@
+[
+  {
+    "id": "straight_line",
+    "title": "Straight-line code",
+    "file": "01_straight_line.c",
+    "description": "No branches: ENTRY, one basic block, EXIT.",
+    "function": "main",
+    "expected": {
+      "nodes": 3,
+      "edges": 2,
+      "reachable_nodes": 3,
+      "complexity": 1,
+      "decision_nodes": 0,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "if_only",
+    "title": "if without else",
+    "file": "02_if_only.c",
+    "description": "One decision; the False edge skips the assignment.",
+    "function": "abs_val",
+    "expected": {
+      "nodes": 5,
+      "edges": 5,
+      "reachable_nodes": 5,
+      "complexity": 2,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "if_else",
+    "title": "if / else",
+    "file": "03_if_else.c",
+    "description": "Two arms that join before the return.",
+    "function": "max_of",
+    "expected": {
+      "nodes": 7,
+      "edges": 7,
+      "reachable_nodes": 7,
+      "complexity": 2,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "nested_if",
+    "title": "Nested if / else-if chain",
+    "file": "04_nested_if.c",
+    "description": "Three decisions, four return blocks sharing one EXIT.",
+    "function": "grade",
+    "expected": {
+      "nodes": 9,
+      "edges": 11,
+      "reachable_nodes": 9,
+      "complexity": 4,
+      "decision_nodes": 3,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "while_loop",
+    "title": "while loop",
+    "file": "05_while_loop.c",
+    "description": "Condition, body and back edge.",
+    "function": "sum_digits",
+    "expected": {
+      "nodes": 6,
+      "edges": 6,
+      "reachable_nodes": 6,
+      "complexity": 2,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "for_continue",
+    "title": "for loop with continue",
+    "file": "06_for_continue.c",
+    "description": "continue reaches the update (i++), not the condition directly.",
+    "function": "sum_even",
+    "expected": {
+      "nodes": 8,
+      "edges": 9,
+      "reachable_nodes": 8,
+      "complexity": 3,
+      "decision_nodes": 2,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "do_while_break",
+    "title": "do-while with break",
+    "file": "07_do_while_break.c",
+    "description": "Body runs first; the condition sits at the bottom.",
+    "function": "countdown",
+    "expected": {
+      "nodes": 6,
+      "edges": 7,
+      "reachable_nodes": 6,
+      "complexity": 3,
+      "decision_nodes": 2,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "switch_fallthrough",
+    "title": "switch with fall-through",
+    "file": "08_switch_fallthrough.c",
+    "description": "case 1 falls into case 2; case 3 and 4 share a body. Each case label adds 1.",
+    "function": "classify",
+    "expected": {
+      "nodes": 9,
+      "edges": 12,
+      "reachable_nodes": 9,
+      "complexity": 5,
+      "course_complexity": 6,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "short_circuit",
+    "title": "Short-circuit && and ||",
+    "file": "09_short_circuit.c",
+    "description": "a || b && c becomes three separate decisions.",
+    "function": "check",
+    "expected": {
+      "nodes": 7,
+      "edges": 9,
+      "reachable_nodes": 7,
+      "complexity": 4,
+      "decision_nodes": 3,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "ternary",
+    "title": "Ternary expression",
+    "file": "10_ternary.c",
+    "description": "The ?: operator is expanded into a decision with two value arms.",
+    "function": "larger",
+    "expected": {
+      "nodes": 6,
+      "edges": 6,
+      "reachable_nodes": 6,
+      "complexity": 2,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "nested_loops",
+    "title": "Nested loops with break and continue",
+    "file": "11_nested_loops.c",
+    "description": "break leaves only the inner loop.",
+    "function": "scan",
+    "expected": {
+      "nodes": 11,
+      "edges": 14,
+      "reachable_nodes": 11,
+      "complexity": 5,
+      "decision_nodes": 4,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "goto_loop",
+    "title": "goto-built loop",
+    "file": "12_goto_loop.c",
+    "description": "A backward goto forms a loop; its back edge is detected via dominators.",
+    "function": "drain",
+    "expected": {
+      "nodes": 5,
+      "edges": 5,
+      "reachable_nodes": 5,
+      "complexity": 2,
+      "decision_nodes": 1,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "unreachable",
+    "title": "Unreachable code",
+    "file": "13_unreachable.c",
+    "description": "Code after return is kept in the graph but marked unreachable and excluded from M.",
+    "function": "early",
+    "expected": {
+      "nodes": 4,
+      "edges": 3,
+      "reachable_nodes": 3,
+      "complexity": 1,
+      "decision_nodes": 0,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "infinite_loop",
+    "title": "Infinite loop",
+    "file": "14_infinite_loop.c",
+    "description": "EXIT is unreachable: M is reported with a warning and no basis paths are invented.",
+    "function": "spin",
+    "expected": {
+      "nodes": 3,
+      "edges": 2,
+      "reachable_nodes": 2,
+      "complexity": 2,
+      "decision_nodes": 0,
+      "exit_reachable": false,
+      "basis_status": "unavailable"
+    }
+  },
+  {
+    "id": "switch_and_conditions",
+    "title": "Switch with compound conditions",
+    "file": "15_switch_and_conditions.c",
+    "description": "Reference example from the project report: N=17, E=23, M=8.",
+    "function": "main",
+    "expected": {
+      "nodes": 17,
+      "edges": 23,
+      "reachable_nodes": 17,
+      "complexity": 8,
+      "course_complexity": 9,
+      "decision_nodes": 6,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "multi_function",
+    "title": "Several functions in one file",
+    "file": "16_multi_function.c",
+    "description": "main is selected by default; use the function selector to analyse clamp.",
+    "function": "main",
+    "expected": {
+      "nodes": 3,
+      "edges": 2,
+      "reachable_nodes": 3,
+      "complexity": 1,
+      "decision_nodes": 0,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  },
+  {
+    "id": "course_default",
+    "title": "Course convention: default counts",
+    "file": "17_course_default.c",
+    "description": "The same switch has strict M=10 and course M=11 because default is a predicate.",
+    "function": "process",
+    "expected": {
+      "nodes": 19,
+      "edges": 27,
+      "reachable_nodes": 19,
+      "complexity": 10,
+      "course_complexity": 11,
+      "decision_nodes": 7,
+      "exit_reachable": true,
+      "basis_status": "complete"
+    }
+  }
+]
